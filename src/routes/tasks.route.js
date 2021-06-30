@@ -1,4 +1,4 @@
-import { Router } from "express";
+const { Router } = require("express");
 const axios = require("axios");
 
 // set up the express router
@@ -33,4 +33,4 @@ tasks.get("/", async (req, res) => {
     );
 });
 
-module.exports = { tasks };
+module.exports = tasks;

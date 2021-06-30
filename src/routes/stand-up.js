@@ -1,4 +1,4 @@
-import { Router } from "express";
+const { Router } = require("express");
 const axios = require("axios");
 
 // set up the express router
@@ -31,4 +31,4 @@ standUp.get("/", async (req, res) => {
     );
 });
 
-module.exports = { standUp };
+module.exports = standUp;

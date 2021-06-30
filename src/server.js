@@ -1,4 +1,4 @@
-import app from "./index";
+const app = require("./index");
 const dotenv = require("dotenv");
 dotenv.config();
 
