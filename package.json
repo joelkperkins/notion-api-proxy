@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "babel-node src/server.js",
     "s": "nodemon --exec babel-node src/server.js",
     "test": "mocha --require @babel/register"
   },
