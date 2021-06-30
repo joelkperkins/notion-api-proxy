@@ -1,5 +1,5 @@
-const standUp = require("./stand-up");
-const tasks = require("./tasks.route");
+import standUp from "./stand-up";
+import tasks from "./tasks.route";
 
 module.exports = {
   standUp,
