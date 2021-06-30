@@ -1,6 +1,6 @@
 # Guild Chat
 
-Guild Chat is an API integrated with MongoDB to stand up a simple messaging application
+A proxy for the Notion API
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ You can clone this repo:
 $ git clone https://github.com/joelkperkins/guild-chat.git
 ```
 
-Then, install 
+Then, install
 
 ```
 $ git npm install
@@ -44,13 +44,13 @@ After cloning Guild Chat, you'll have a `config.js` file in your directory. In i
 }
 ```
 
-The default db string and the chatroom name will work for testing. 
+The default db string and the chatroom name will work for testing.
 
 ## <a name="routes"></a>Routes
 
 ### GET /messages
 
-Get all messages in database sent in last 30 days, limited to 100. Send a `GET` to `/messages` to retrieve all messages. 
+Get all messages in database sent in last 30 days, limited to 100. Send a `GET` to `/messages` to retrieve all messages.
 
 ```
 /**
@@ -62,7 +62,7 @@ Get all messages in database sent in last 30 days, limited to 100. Send a `GET` 
 
 ### GET /messages/between?to=&from=
 
-Gets all messages sent between two users within 100 days, limited to 100. Send a `GET` to `/messages?to=<string>&from=<string>` with added url query parameters indicating the users whose conversation you would like to retrieve. 
+Gets all messages sent between two users within 100 days, limited to 100. Send a `GET` to `/messages?to=<string>&from=<string>` with added url query parameters indicating the users whose conversation you would like to retrieve.
 
 ```
 /**
@@ -78,7 +78,7 @@ Gets all messages sent between two users within 100 days, limited to 100. Send a
 
 ### POST /chat
 
-Send a message to another user. Send a `POST` to `/chat` with a body containing the sender, recipient, and message. The message is saved and can be retrieved with the GET routes. 
+Send a message to another user. Send a `POST` to `/chat` with a body containing the sender, recipient, and message. The message is saved and can be retrieved with the GET routes.
 
 ```
 /**
@@ -92,11 +92,12 @@ Send a message to another user. Send a `POST` to `/chat` with a body containing 
 
 ### PUT /chat/react
 
-React to a message received. Send a `PUT` to `/chat/react` with a body containing the ID of the message to react to and reaction string. This reaction is saved with the message. 
+React to a message received. Send a `PUT` to `/chat/react` with a body containing the ID of the message to react to and reaction string. This reaction is saved with the message.
 
-Currently accepted reactions are: 
- > 'like'
- > 'dislike"
+Currently accepted reactions are:
+
+> 'like'
+> 'dislike"
 
 ```
 /**
@@ -111,9 +112,8 @@ Currently accepted reactions are:
 ## <a name="notes"></a>Notes
 
 Our Demo Mongo database will eventually run out of space. Please dont spam messages while testing.
-100 stars and we will add a delete function. 
+100 stars and we will add a delete function.
 
 ## <a name="author"></a>Author
 
 Joel K. Perkins
-
