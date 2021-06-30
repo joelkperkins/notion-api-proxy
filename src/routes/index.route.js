@@ -1,7 +1,7 @@
-import { messages } from './messages.route'
-import { chat } from './chat.route'
+import { standUp } from "./stand-up";
+import { tasks } from "./tasks.route";
 
 module.exports = {
-  messages,
-  chat
-}
+  standUp,
+  tasks,
+};
