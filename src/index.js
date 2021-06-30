@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ping
-app.get("/ping", (req, res) => res.status(200).send("OK"));
+app.get("/", (req, res) => res.status(200).send("OK"));
 
 // routes
 app.use("/tasks", routes.tasks); // gets tasks db
